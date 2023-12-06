@@ -15,12 +15,13 @@
   <body>
     <div class="weather-app">
       <header>
-        <form>
+        <form class="search-form" id="search-form">
           <input
             type="search"
             placeholder="Enter a city.."
             required
-            class="weather-app-form-input"
+            id="search-form-input"
+            class="search-form-input"
           />
           <input type="submit" value="Search" class="search-form-button" />
         </form>
@@ -30,21 +31,14 @@
           <div>
             <h1 class="weather-app-city" id="city">Paris</h1>
             <p class="weather-app-details">
-              <span id="time">Wednesday 18:43</span>,
-              <span id="description">scattered clouds</span>
+              Tuesday 14:49, scattered clouds
               <br />
-              Humidity: <strong id="humidity">77%</strong>, Wind:
-              <strong id="wind-speed">1.03km/h</strong>
+              Humidity: <strong>66%</strong>, Wind: <strong>3.13km/h</strong>
             </p>
           </div>
           <div class="weather-app-temperature-container">
-            <div id="icon">
-              <img
-                src="http://shecodes-assets.s3.amazonaws.com/api/weather/icons/scattered-clouds-day.png"
-                class="weather-app-icon"
-              />
-            </div>
-            <div class="weather-app-temperature" id="temperature">8</div>
+            <div class="weather-app-icon">🌤️</div>
+            <div class="weather-app-temperature">12</div>
             <div class="weatehr-app-unit">°C</div>
           </div>
         </div>
@@ -63,5 +57,6 @@
         >
       </footer>
     </div>
+    <script src="src/index.js"></script>
   </body>
 </html>
