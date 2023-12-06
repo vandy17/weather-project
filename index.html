@@ -3,29 +3,64 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Playpen+Sans&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="src/style.css" />
     <title>Weather Application</title>
   </head>
   <body>
-    <div class="weather-container">
+    <div class="weather-app">
       <header>
-        <form action="">
-          <input type="text" placeholder="Enter a city" />
-          <button>Search</button>
+        <form>
+          <input
+            type="search"
+            placeholder="Enter a city.."
+            required
+            class="weather-app-form-input"
+          />
+          <input type="submit" value="Search" class="search-form-button" />
         </form>
       </header>
       <main>
-        <div class="weather-main">
-          Paris <br />
-          Tuesday 14:56, <br />
-          moderate rain <br />
-          Humidity: 87%, Wind: 7.2km/h
-          <br />
-          ☀️24°C
+        <div class="weather-app-data">
+          <div>
+            <h1 class="weather-app-city" id="city">Paris</h1>
+            <p class="weather-app-details">
+              <span id="time">Wednesday 18:43</span>,
+              <span id="description">scattered clouds</span>
+              <br />
+              Humidity: <strong id="humidity">77%</strong>, Wind:
+              <strong id="wind-speed">1.03km/h</strong>
+            </p>
+          </div>
+          <div class="weather-app-temperature-container">
+            <div id="icon">
+              <img
+                src="http://shecodes-assets.s3.amazonaws.com/api/weather/icons/scattered-clouds-day.png"
+                class="weather-app-icon"
+              />
+            </div>
+            <div class="weather-app-temperature" id="temperature">8</div>
+            <div class="weatehr-app-unit">°C</div>
+          </div>
         </div>
       </main>
+
       <footer>
-        This project was coded by <aa href="#">Vandana Gupta</aa> and is on
-        <a href="#">GitHub</a> and hosted on <a href="#">Netlify</a>
+        This project was coded by
+        <a href="https://github.com/vandy17" target="_blank"> Vandana Gupta</a>,
+        is
+        <a href="https://github.com/vandy17/weather-project" target="_blank"
+          >open-sourced on GitHub</a
+        >
+        and
+        <a href="https://weather-find-free-app.netlify.app/" target="_blank"
+          >hosted on Netlify</a
+        >
       </footer>
     </div>
   </body>
